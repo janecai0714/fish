@@ -1,0 +1,25 @@
+---
+title: "Untitled"
+output: html_document
+date: "2022-11-09"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+```{r}
+pred <- read.csv("~/Documents/fish/seq_pred.csv")
+```
+
+```{r}
+pred_non_zero <- pred %>% filter(att_pred >= 0.5 )
+```
+
+
+```{r}
+
+hist(pred$att_pred)
+```
+
